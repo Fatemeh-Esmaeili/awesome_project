@@ -11,13 +11,15 @@ For this assignment, both **MySQL** and **SDM** were run inside Docker container
 - **MySQL Version:** `9.4.0`  
   Retrieved with:  
   ```bash
-  docker exec -it sdm-mysql mysql -u root -pXXXX -e "SELECT VERSION();"```
+  docker exec -it sdm-mysql mysql -u root -pXXXX -e "SELECT VERSION();"
+  ```
 
 
 - **SDM Version:** `0.6.4`  
   Retrieved with:  
   ```bash
-  docker run -v "%cd%:/workspace" -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm --version```
+  docker run -v "%cd%:/workspace" -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm --version
+  ```
 ---
 
 ## How the SDM Tool Works
@@ -69,7 +71,8 @@ In this assignment, I demonstrated SDM’s rollback functionality:
 4. Rolled back to the initial version (`0000`) using:
 
 ```bash
-docker run -v %cd%:/workspace -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm rollback --version 0000 dev```
+docker run -v %cd%:/workspace -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm rollback --version 0000 dev
+```
 
 
 
@@ -96,14 +99,17 @@ By mastering SDM, a data scientist can manage schema and data evolution in a con
 When moving the pre-commit file from the main repository folder to `.git/hooks/` using:
 
 ```bash
-mv pre-commit .git/hooks/```
+mv pre-commit .git/hooks/
+```
 
 Git pre-commit checks began blocking commits, preventing pushes to GitHub.
 
 **Solution:**
 To bypass the issue, I committed changes using:
+
 ```bash
-git commit -m "message" --no-verify```
+git commit -m "message" --no-verify
+```
 
 
 This allowed successful commits while keeping the repository functional. The issue was later traced to a **misconfigured pre-commit** hook, which may be adjusted or removed in future revisions.
