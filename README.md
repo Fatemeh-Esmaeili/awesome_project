@@ -20,9 +20,9 @@ For this assignment, both **MySQL** and **SDM** were run inside Docker container
   ```bash
   docker run -v "%cd%:/workspace" -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm --version
   ```
----
 
-## How the SDM Tool Works
+
+## How the sdm Tool Works
 sdm is a tool that ensures databases remain consistent across environments (development, test, and production) by version-controlling both schema and data changes.
 
 ### Core Concepts
@@ -76,7 +76,7 @@ docker run -v %cd%:/workspace -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migr
 
 
 
-### Why SDM Is Valuable for Data Scientists
+### Why sdm Is Valuable for Data Scientists
 
 - SDM offers several benefits for data-driven projects:
 
