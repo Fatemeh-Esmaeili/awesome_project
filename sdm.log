@@ -37,3 +37,8 @@
 |  0001 | add_address_to_user_tab | schema | SUCCESSFUL | true           | 2025-10-09 06:10:20 | 2025-10-09 06:10:21 |
 |  0002 | seed_user_table         | data   | SUCCESSFUL | true           | 2025-10-09 06:30:56 | 2025-10-09 06:30:56 |
 2025-10-09 06:32:56 [INFO]  Done
+2025-10-09 06:34:22 [INFO]  Rollbacking MigrationPlan(0002_seed_user_table)
+2025-10-09 06:34:22 [INFO]  Migrated SQL=DELETE FROM `user` WHERE `id`=1;, result.rowcount=1
+2025-10-09 06:34:22 [INFO]  Rollbacking MigrationPlan(0001_add_address_to_user_tab)
+2025-10-09 06:34:22 [INFO]  Run skeema push dev --allow-unsafe
+2025-10-09 06:34:23 [INFO]  Done
