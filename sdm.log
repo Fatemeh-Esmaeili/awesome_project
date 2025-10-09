@@ -30,3 +30,10 @@
 2025-10-09 06:30:56 [INFO]  Executing MigrationPlan(0002_seed_user_table)
 2025-10-09 06:30:56 [INFO]  Migrated SQL=INSERT INTO `user` (`id`, `name`, `address`) VALUES (1, 'foo', 'bar');, result.rowcount=1
 2025-10-09 06:30:56 [INFO]  Done
+2025-10-09 06:32:56 [INFO]  Migration history:
+|   ver | name                    | type   | state      | rollbackable   | created             | updated             |
+|-------+-------------------------+--------+------------+----------------+---------------------+---------------------|
+|  0000 | init                    | schema | SUCCESSFUL | false          | 2025-10-09 04:11:21 | 2025-10-09 04:11:22 |
+|  0001 | add_address_to_user_tab | schema | SUCCESSFUL | true           | 2025-10-09 06:10:20 | 2025-10-09 06:10:21 |
+|  0002 | seed_user_table         | data   | SUCCESSFUL | true           | 2025-10-09 06:30:56 | 2025-10-09 06:30:56 |
+2025-10-09 06:32:56 [INFO]  Done
