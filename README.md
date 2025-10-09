@@ -38,35 +38,35 @@ Each migration is stored in a JSON migration plan with forward (apply) and optio
 
 ### Typical Workflow
 
-1. Initialize project:
-sdm init — creates schema and migration folders.
+1. **Initialize project**:
+`sdm init` creates schema and migration folders.
 
-2. Add environments:
-sdm add-env — links databases like dev, staging, and prod.
+2. **Add environments**:
+`sdm add-env` links databases like dev, staging, and prod.
 
-3. Create migrations:
-sdm make-schema or sdm make-data — generates migration plans.
+3. **Create migrations**:
+`sdm make-schema` or `sdm make-data` — generates migration plans.
 
-4. Apply migrations:
-sdm migrate — applies pending migrations.
+4. **Apply migrations**:
+`sdm migrate` applies pending migrations.
 
-5. Rollback:
-sdm rollback — reverts to a previous version.
+5. **Rollback**:
+`sdm rollback` reverts to a previous version.
 
-6. Check differences:
-sdm diff — detects schema drift between environments.
+6. **Check differences**:
+`sdm diff` detects schema drift between environments.
 
 ### Example: Rollback (Assignment Task)
 
 In this assignment, I demonstrated SDM’s rollback functionality:
 
-1. Created a user table in the awesome_db database.
+1. Created a user table in the `awesome_db database`.
 
-2. Added a new column address through schema migration.
+2. Added a new column `address` through schema migration.
 
 3. Seeded test data.
 
-4. Rolled back to the initial version (0000) using:
+4. Rolled back to the initial version (`0000`) using:
 
 ```bash
 sdm rollback --version 0000 dev
