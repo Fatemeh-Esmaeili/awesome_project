@@ -18,3 +18,57 @@ For this assignment, both **MySQL** and **SDM** were run inside Docker container
   Retrieved with:  
   ```bash
   docker run -v "%cd%:/workspace" -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm --version
+---
+
+## How the SDM Tool Works
+SDM (Schema Data Migration) is a tool that ensures databases remain consistent across environments (development, test, and production) by version-controlling both schema and data changes.
+
+### Core Concepts
+
+- **Schema Migrations**:
+Managed by Skeema, which compares the live database schema with a model and generates the necessary SQL changes (e.g., adding/dropping columns or tables).
+
+- **Data Migrations**:
+Implemented using SQL, Python, TypeScript, or Shell scripts to apply or modify data as part of the versioned migration process.
+
+- **Repeatable Migrations**:
+Handle reusable operations such as seeding data or creating views that can be reapplied multiple times safely.
+
+Each migration is stored in a JSON migration plan with forward (apply) and optional backward (rollback) steps. SDM automatically maintains migration history for auditing and rollback.
+
+### Typical Workflow
+
+1. Initialize project:
+sdm init — creates schema and migration folders.
+
+2. Add environments:
+sdm add-env — links databases like dev, staging, and prod.
+
+3. Create migrations:
+sdm make-schema or sdm make-data — generates migration plans.
+
+4. Apply migrations:
+sdm migrate — applies pending migrations.
+
+5. Rollback:
+sdm rollback — reverts to a previous version.
+
+6. Check differences:
+sdm diff — detects schema drift between environments.
+
+### Example: Rollback (Assignment Task)
+
+In this assignment, I demonstrated SDM’s rollback functionality:
+
+1. Created a user table in the awesome_db database.
+
+2. Added a new column address through schema migration.
+
+3. Seeded test data.
+
+4. Rolled back to the initial version (0000) using:
+
+```bash
+sdm rollback --version 0000 dev
+
+
