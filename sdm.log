@@ -2,3 +2,5 @@
 2025-10-09 03:43:32 [INFO]  Saved migration plan to /workspace/migration_plan/0000_init.json
 2025-10-09 03:43:32 [INFO]  MYSQL_WD is saved in .env file, path=/workspace/.env
 2025-10-09 03:43:32 [INFO]  Done
+2025-10-09 03:55:17 [INFO]  Run skeema add-environment dev --host host.docker.internal --port 3307 --user root -d schema --ignore-table _migration_history
+2025-10-09 03:55:18 [INFO]  Done
