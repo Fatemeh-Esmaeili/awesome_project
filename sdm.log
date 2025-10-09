@@ -13,3 +13,6 @@
 2025-10-09 04:18:06 [INFO]  Done
 2025-10-09 06:04:49 [INFO]  Saved migration plan to /workspace/migration_plan/0001_add_address_to_user_tab.json
 2025-10-09 06:04:49 [INFO]  Done
+2025-10-09 06:10:20 [INFO]  Executing MigrationPlan(0001_add_address_to_user_tab)
+2025-10-09 06:10:20 [INFO]  Run skeema push dev
+2025-10-09 06:10:21 [INFO]  Done
