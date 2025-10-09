@@ -20,7 +20,7 @@ For this assignment, both **MySQL** and **SDM** were run inside Docker container
   ```bash
   docker run -v "%cd%:/workspace" -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm --version
   ```
-
+---
 
 ## How the sdm Tool Works
 sdm is a tool that ensures databases remain consistent across environments (development, test, and production) by version-controlling both schema and data changes.
@@ -100,6 +100,12 @@ When moving the pre-commit file from the main repository folder to `.git/hooks/`
 
 ```bash
 mv pre-commit .git/hooks/
+```
+
+or in my own Windows environment as follows:
+
+```bash
+move pre-commit .git\hooks\
 ```
 
 Git pre-commit checks began blocking commits, preventing pushes to GitHub.
