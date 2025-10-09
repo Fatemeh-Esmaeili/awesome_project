@@ -12,3 +12,9 @@ For this assignment, both **MySQL** and **SDM** were run inside Docker container
   Retrieved with:  
   ```bash
   docker exec -it sdm-mysql mysql -u root -pXXXX -e "SELECT VERSION();"
+
+
+- **SDM Version:** `0.6.4`  
+  Retrieved with:  
+  ```bash
+  docker run -v "%cd%:/workspace" -e MYSQL_PWD="XXXX" -it --rm beim/schema-data-migration:latest sdm --version
