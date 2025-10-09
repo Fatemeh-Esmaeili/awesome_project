@@ -4,3 +4,6 @@
 2025-10-09 03:43:32 [INFO]  Done
 2025-10-09 03:55:17 [INFO]  Run skeema add-environment dev --host host.docker.internal --port 3307 --user root -d schema --ignore-table _migration_history
 2025-10-09 03:55:18 [INFO]  Done
+2025-10-09 04:11:21 [INFO]  Executing MigrationPlan(0000_init)
+2025-10-09 04:11:21 [INFO]  Run skeema push dev
+2025-10-09 04:11:21 [INFO]  Done
