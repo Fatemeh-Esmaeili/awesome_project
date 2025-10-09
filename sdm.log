@@ -16,3 +16,11 @@
 2025-10-09 06:10:20 [INFO]  Executing MigrationPlan(0001_add_address_to_user_tab)
 2025-10-09 06:10:20 [INFO]  Run skeema push dev
 2025-10-09 06:10:21 [INFO]  Done
+2025-10-09 06:26:39 [INFO]  Migration history:
+|   ver | name                    | type   | state      | rollbackable   | created             | updated             |
+|-------+-------------------------+--------+------------+----------------+---------------------+---------------------|
+|  0000 | init                    | schema | SUCCESSFUL | false          | 2025-10-09 04:11:21 | 2025-10-09 04:11:22 |
+|  0001 | add_address_to_user_tab | schema | SUCCESSFUL | true           | 2025-10-09 06:10:20 | 2025-10-09 06:10:21 |
+2025-10-09 06:26:39 [INFO]  Done
+2025-10-09 06:27:23 [INFO]  Saved migration plan to /workspace/migration_plan/0002_seed_user_table.json
+2025-10-09 06:27:23 [INFO]  Done
