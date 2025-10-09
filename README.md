@@ -100,12 +100,8 @@ When moving the pre-commit file from the main repository folder to `.git/hooks/`
 
 ```bash
 mv pre-commit .git/hooks/
-```
-
-or in my own Windows environment as follows:
-
-```bash
-move pre-commit .git\hooks\
+# or on Windows:
+move pre-commit .git/hooks/
 ```
 
 Git pre-commit checks began blocking commits, preventing pushes to GitHub.
